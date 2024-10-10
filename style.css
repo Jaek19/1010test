@@ -1,0 +1,184 @@
+:root {
+  --base-color: #499b00;
+  --dominant-color: #e2ef97;
+  --bgcolor-lightgray: #f8f8f8;
+}
+
+#layout {
+  max-width: 500px;
+  margin: auto;
+  font-family: 'Nanum Gothic', 'sans-serif';
+  font-size: 10pt;
+  line-height: 190%;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2 {
+  font-family: 'Gugi', 'cursive';
+}
+
+header {
+  background-color: var(--base-color);
+  position: relative;
+  display: flex;
+  color: white;
+}
+header button {
+  background: transparent;
+  color: var(--bgcolor-white);
+  border: none;
+  padding-left: 30px;
+}
+header h1 {
+  flex: 1;
+  text-align: center;
+}
+header ruby {
+  font-size: 2rem;
+  font-family: 'Nanum Gothic', 'sans-serif';
+  font-weight: bold;
+}
+ruby rt {
+  padding-bottom: 5px;
+}
+
+header nav {
+  position: absolute;
+  height: 40vh;
+  width: 100%;
+  left: 0;
+  top: 100px;
+  background-color: var(--bgcolor-lightgray);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  overflow-y: hidden;
+  z-index: 1;
+  transition: max-width 0.3s ease-out;
+  max-width: 0;
+  visibility: hidden;
+}
+header nav.show {
+  max-width: 500px;
+  visibility: visible;
+}
+header nav.hide {
+  max-width: 0;
+  visibility: hidden;
+}
+nav ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav ol li {
+  border-bottom: 1px solid #ddd;
+  padding: 20px;
+  padding-left: 30px;
+  transition: background 0.3s;
+}
+nav ol > li:hover {
+  background-color: var(--dominant-color);
+}
+nav ol > li a {
+  text-decoration: none;
+  display: block;
+  background: url(images/bullet.png) no-repeat left;
+  padding-left: 15px;
+  color: black;
+  font-size: 1.15rem;
+  font-weight: bold;
+}
+nav ol > li a:hover {
+  color: var(--dominant-color);
+}
+
+p::first-letter {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--base-color);
+}
+
+p {
+  margin: 15px 10px;
+  text-align: justify;
+}
+p > img {
+  margin: 0 10px;
+}
+
+[alt='삼덕 공원 이미지'] {
+  float: right;
+  width: 150px;
+}
+[alt='현재 성덕 공원 외형'] {
+  width: 150px;
+  float: left;
+}
+main ol {
+  background: url(images/bg.jpg) no-repeat left;
+  text-align: right;
+  list-style-position: inside;
+  color: var(--base-color);
+  margin-right: 10px;
+}
+main section {
+  padding-top: 3px;
+}
+
+main figure {
+  margin-bottom: 20px;
+}
+main figure img {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+main figcaption {
+  font-size: 0.6rem;
+  text-align: center;
+  padding-top: 5px;
+}
+
+aside {
+  background-color: var(--dominant-color);
+}
+
+aside dt {
+  padding-top: 10px;
+  padding-left: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+aside dt::before {
+  content: '♣';
+  color: var(--base-color);
+  font-size: 1.2rem;
+}
+
+aside dd {
+  margin-left: 15px;
+  color: gray;
+}
+
+footer {
+  background-color: var(--bgcolor-lightgray);
+  text-align: center;
+}
+
+footer span {
+  font-style: italic;
+}
+
+#toUp {
+  text-align: right;
+  position: fixed;
+  right: calc(((100% - 500px) / 2) + 5px);
+  bottom: 10px;
+  background: white;
+  box-shadow: 0 0 5px black;
+  border-radius: 5px;
+  text-decoration: none;
+}
